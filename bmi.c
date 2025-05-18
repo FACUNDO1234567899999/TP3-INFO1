@@ -9,28 +9,16 @@ Welcome to GDB Online.
 #include <stdio.h>
 
 int main()
-{   float peso;
-    float altura;
-    printf("ingrese el peso en kg:\n");
+{
+float peso; 
+float altura;  
+
+    printf("Ingrese el peso en kg: ");
     scanf("%f",&peso);
-    printf("ingrese la altura en metros:\n");
-    scanf("%f",&altura);
-    float idc=peso/(altura*altura);
-    
-    if(idc<18.5){                                      //bajo peso
-        printf("Su indice de masa corporal es: %.2f",idc);
-        
-    }   
-     if(idc<24.9 && idc>18.5 ){                      //normal                     
-        printf("Su indice de masa corporal es: %.2f",idc);
-         
-     }
-     if(idc<29.9 && idc>25){                        //sobrepeso
-        printf("Su indice de masa corporal es: %.2f",idc);
-         
-     }
-     if(idc>=30){                                   //obecidad
-        printf("Su indice de masa corporal es: %.2f",idc);
-    }
+     printf("Ingrese la altura en metros: ");
+    scanf("%f", &altura);
+     float idc=peso/(altura*altura);
+     printf("Su índice de masa corporal es: %.2f\n\nÍndice | Condición\n-----------------------------\n<18.5 | Bajo peso\n18.5 a 24.9 | Normal\n25.0 a 29.9 | Sobrepeso\n>=30| Obesidad",idc);
+
     return 0;
 }
